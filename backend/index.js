@@ -26,7 +26,7 @@ const MODEL_NAME = "gpt-3.5-turbo";
 const handleChatRequest = async (request, response, expertType) => {
   try {
     const { chats } = request.body;
-    const maxTokens = 5;
+    const maxTokens = 500;
     const result = await openai.createChatCompletion({
       model: MODEL_NAME,
       messages: [
